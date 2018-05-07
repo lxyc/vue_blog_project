@@ -8,6 +8,9 @@ import LifecycleNest from '@/views/Lifecycle/LifecycleNest'
 import LifecycleSibling from '@/views/Lifecycle/LifecycleSibling'
 import LifecycleMixin from '@/views/Lifecycle/LifecycleMixin'
 
+import Comp from '@/views/Comp/Comp'
+import CompMix from '@/views/Comp/CompMix/CompMix'
+
 Vue.use(Router)
 
 export const constantRouterMap = [
@@ -46,6 +49,21 @@ export const constantRouterMap = [
         name: 'mixin lifecycle',
         descr: '宏mixin生命周期（mixin lifecycle）',
         component: LifecycleMixin
+      }
+    ]
+  },
+  {
+    path: '/comp',
+    component: Comp,
+    redirect: '/comp/mix',
+    name: 'comp',
+    descr: '组件及数据传递',
+    children: [
+      {
+        path: '/comp/mix',
+        component: CompMix,
+        name: 'compMix',
+        descr: '组件的基本组合'
       }
     ]
   }
