@@ -4,6 +4,8 @@ import Router from 'vue-router'
 import Index from '@/views/Index'
 import Lifecycle from '@/views/Lifecycle/Lifecycle'
 import LifecycleSingle from '@/views/Lifecycle/LifecycleSingle'
+import LifecycleNest from '@/views/Lifecycle/LifecycleNest'
+import LifecycleSibling from '@/views/Lifecycle/LifecycleSibling'
 
 Vue.use(Router)
 
@@ -18,11 +20,25 @@ export const constantRouterMap = [
     component: Lifecycle,
     redirect: '/lifecycle/single',
     name: 'lifecycle',
+    descr: '生命周期（lifecycle）',
     children: [
       {
         path: '/lifecycle/single',
         name: 'single lifecycle',
+        descr: '单组件生命周期（single lifecycle）',
         component: LifecycleSingle
+      },
+      {
+        path: '/lifecycle/nest',
+        name: 'nest lifecycle',
+        descr: '父子组件生命周期（nest lifecycle）',
+        component: LifecycleNest
+      },
+      {
+        path: '/lifecycle/sibling',
+        name: 'sibling lifecycle',
+        descr: '兄弟组件生命周期（sibling lifecycle）',
+        component: LifecycleSibling
       }
     ]
   }

@@ -4,14 +4,14 @@
       <div class="menu"
         :class="{'clickable': !link.children}"
         @click="gotoRoute(link)">
-        {{ link.name }}
+        {{ link.descr }}
       </div>
       <div
         class="sub-menu clickable"
-        v-for="subLink in link.children"
+        v-for="(subLink, index) in link.children"
         :key="subLink.path"
         @click="gotoRoute(subLink)">
-        {{ subLink.name }}
+        {{ index+1 }}、{{ subLink.descr }}
       </div>
     </div>
   </div>
@@ -38,7 +38,7 @@ export default {
 <style scoped>
 .menu-wrapper {
   margin: 20px;
-  max-width: 200px;
+  max-width: 300px;
   font: menu;
 }
 .menu {

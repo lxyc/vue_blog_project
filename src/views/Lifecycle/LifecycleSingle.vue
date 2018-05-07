@@ -8,14 +8,22 @@
 
 <script>
 export default {
+  props: {
+    compName: {
+      type: String,
+      default: 'single'
+    }
+  },
   data () {
     return {
       dataVar: 1
     }
   },
   beforeCreate () {
-    this.compName = 'single'
-    console.log(`--${this.compName}--beforeCreate`)
+    // this.compName = 'single'
+    // console.log(`--${this.compName}--beforeCreate`)
+
+    console.log(`  --data未初始化--beforeCreate`)
   },
   created () {
     console.log(`  --${this.compName}--created`)
