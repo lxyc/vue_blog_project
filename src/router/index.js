@@ -11,6 +11,7 @@ import LifecycleMixin from '@/views/Lifecycle/LifecycleMixin'
 import Comp from '@/views/Comp/Comp'
 import CompMix from '@/views/Comp/CompMix/CompMix'
 import CompProp from '@/views/Comp/CompProp/CompProp'
+import CompRoot from '@/views/Comp/CompRoot/CompRoot'
 
 Vue.use(Router)
 
@@ -71,6 +72,12 @@ export const constantRouterMap = [
         component: CompProp,
         name: 'compProp',
         descr: '组件的基本数据通信（comp prop）'
+      },
+      {
+        path: '/comp/root',
+        component: CompRoot,
+        name: 'compRoot',
+        descr: '组件的根实例通信（comp root）'
       }
     ]
   }
