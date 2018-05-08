@@ -12,6 +12,7 @@ import Comp from '@/views/Comp/Comp'
 import CompMix from '@/views/Comp/CompMix/CompMix'
 import CompProp from '@/views/Comp/CompProp/CompProp'
 import CompRoot from '@/views/Comp/CompRoot/CompRoot'
+import CompBus from '@/views/Comp/CompBus/CompBus'
 
 Vue.use(Router)
 
@@ -71,13 +72,19 @@ export const constantRouterMap = [
         path: '/comp/prop',
         component: CompProp,
         name: 'compProp',
-        descr: '组件的基本数据通信（comp prop）'
+        descr: '组件通信-prop & $emit（comp prop）'
       },
       {
         path: '/comp/root',
         component: CompRoot,
         name: 'compRoot',
-        descr: '组件的根实例通信（comp root）'
+        descr: '组件通信-根实例$root（comp root）'
+      },
+      {
+        path: '/comp/bus',
+        component: CompBus,
+        name: 'compBus',
+        descr: '组件通信-总线Bus（comp bus）'
       }
     ]
   }
