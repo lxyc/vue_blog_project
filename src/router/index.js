@@ -10,6 +10,7 @@ import LifecycleMixin from '@/views/Lifecycle/LifecycleMixin'
 
 import Comp from '@/views/Comp/Comp'
 import CompMix from '@/views/Comp/CompMix/CompMix'
+import CompProp from '@/views/Comp/CompProp/CompProp'
 
 Vue.use(Router)
 
@@ -63,7 +64,13 @@ export const constantRouterMap = [
         path: '/comp/mix',
         component: CompMix,
         name: 'compMix',
-        descr: '组件的基本组合'
+        descr: '组件的基本组合（comp mix）'
+      },
+      {
+        path: '/comp/prop',
+        component: CompProp,
+        name: 'compProp',
+        descr: '组件的基本数据通信（comp prop）'
       }
     ]
   }
