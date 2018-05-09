@@ -14,6 +14,8 @@ import CompProp from '@/views/Comp/CompProp/CompProp'
 import CompRoot from '@/views/Comp/CompRoot/CompRoot'
 import CompBus from '@/views/Comp/CompBus/CompBus'
 
+import ShoppingApp from '@/views/ShoppingApp/ShoppingApp'
+
 Vue.use(Router)
 
 export const constantRouterMap = [
@@ -87,6 +89,12 @@ export const constantRouterMap = [
         descr: '组件通信-总线Bus（comp bus）'
       }
     ]
+  },
+  {
+    path: '/shopping',
+    component: ShoppingApp,
+    name: 'shoppingApp',
+    descr: '购物车App-Vuex'
   }
 ]
 
