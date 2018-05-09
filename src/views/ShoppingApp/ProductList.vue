@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations, mapActions } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
   data () {
@@ -47,10 +47,8 @@ export default {
     handleChange () {
       this.setProducts(this.currentProducts)
     },
-    ...mapMutations([
-      'setProducts'
-    ]),
     ...mapActions([
+      'setProducts',
       'getAllProducts'
     ])
   }
